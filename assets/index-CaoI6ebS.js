@@ -4492,7 +4492,7 @@ void main() {
   gl_FragColor = applySerigraphy(color, vUv, uNetworkMask, uNetworkGray, uSituatedMask, uSituatedGray);
 
 }
-`);tv({MorphBlendMaterial:gy});function _y(e,t,n,r){if(t<=1)return{i0:0,i1:0,progress:0};let i=Math.max(n,0)+Math.max(r,1e-4),a=i*t,o=(e%a+a)%a,s=Math.floor(o/i),c=o-s*i,l=s,u=(s+1)%t,d=c<n?0:(c-n)/Math.max(r,1e-4);return{i0:l,i1:u,progress:Math.min(d,1)}}function vy(e,{holdSeconds:t=2,transitionSeconds:n=2,resolution:r=1024,noiseScale:i=3,edge:a=.12,networkMaskTexture:o=null,networkGray:s=.5,situatedMaskTexture:c=null,situatedGray:l=.7}={}){let u=ay(e),d=(0,v.useMemo)(()=>Array.isArray(u)?u:[u],[u]),{gl:f}=O_(),p=oy(r,r,{depthBuffer:!1,stencilBuffer:!1}),m=(0,v.useMemo)(()=>{let e=new gy;e.toneMapped=!1,e.depthTest=!1,e.depthWrite=!1;let t=new za(new Qc(2,2),e),n=new Gr;return n.add(t),{material:e,mesh:t,scene:n,camera:new Au(-1,1,1,-1,0,1)}},[]);return(0,v.useEffect)(()=>{m.material.uNetworkMask=o,m.material.uNetworkGray=s,m.material.uSituatedMask=c,m.material.uSituatedGray=l},[m,o,s,c,l]),k_(e=>{let r=d.length;if(r===0)return;let{i0:o,i1:s,progress:c}=_y(e.clock.elapsedTime,r,t,n);m.material.uTexA=d[o],m.material.uTexB=d[s],m.material.uProgress=c,m.material.uNoiseScale=i,m.material.uEdge=a;let l=f.getRenderTarget();f.setRenderTarget(p),f.render(m.scene,m.camera),f.setRenderTarget(l)}),p.texture}function yy({alphaMaps:e=[`/alpha-a.png`,`/alpha-b.png`],holdSeconds:t=2,transitionSeconds:n=2}){let r=(0,v.useRef)(),{camera:i,viewport:a}=O_(),o=vy(e,{holdSeconds:t,transitionSeconds:n});return k_(()=>{if(r.current){let e=a.getCurrentViewport(i,[0,0,0]);r.current.scale.set(e.width,e.height,1)}}),(0,$.jsxs)(`mesh`,{ref:r,position:[0,0,0],children:[(0,$.jsx)(`planeGeometry`,{args:[1,1]}),(0,$.jsx)(ly,{alphaMap:o,transparent:!0,transmission:1,thickness:1,roughness:.2,ior:1.5,chromaticAberration:0,anisotropicBlur:0,distortion:0,distortionScale:.7,temporalDistortion:0,samples:6,resolution:512})]})}function by(){return(0,$.jsxs)($.Fragment,{children:[(0,$.jsx)(`ambientLight`,{intensity:.3}),(0,$.jsx)(`directionalLight`,{position:[3,4,5],intensity:1}),(0,$.jsx)(hy,{z:-3,noiseScale:.5,speed:.1}),(0,$.jsx)(yy,{alphaMaps:[`/situated-ai-network/city.png`,`/situated-ai-network/museum.png`,`/situated-ai-network/5.png`],holdSeconds:4,transitionSeconds:3})]})}var xy={overlay:`_overlay_1g26y_1`,tabUnit:`_tabUnit_1g26y_15`,panel:`_panel_1g26y_16`,panelOpen:`_panelOpen_1g26y_16`,panelContent:`_panelContent_1g26y_55`,panelHeading:`_panelHeading_1g26y_109`,panelBody:`_panelBody_1g26y_118`,group:`_group_1g26y_127`,groupHeading:`_groupHeading_1g26y_131`,list:`_list_1g26y_141`,listItem:`_listItem_1g26y_147`,itemHeader:`_itemHeader_1g26y_156`,itemMeta:`_itemMeta_1g26y_172`,itemTitle:`_itemTitle_1g26y_179`,itemDesc:`_itemDesc_1g26y_186`,itemBody:`_itemBody_1g26y_193`,itemTag:`_itemTag_1g26y_208`,tab:`_tab_1g26y_15`,tabActive:`_tabActive_1g26y_16`,tabLabel:`_tabLabel_1g26y_262`},Sy=`---
+`);tv({MorphBlendMaterial:gy});function _y(e,t,n,r){if(t<=1)return{i0:0,i1:0,progress:0};let i=Math.max(n,0)+Math.max(r,1e-4),a=i*t,o=(e%a+a)%a,s=Math.floor(o/i),c=o-s*i,l=s,u=(s+1)%t,d=c<n?0:(c-n)/Math.max(r,1e-4);return{i0:l,i1:u,progress:Math.min(d,1)}}function vy(e,{holdSeconds:t=2,transitionSeconds:n=2,resolution:r=1024,noiseScale:i=3,edge:a=.12,networkMaskTexture:o=null,networkGray:s=.5,situatedMaskTexture:c=null,situatedGray:l=.7}={}){let u=ay(e),d=(0,v.useMemo)(()=>Array.isArray(u)?u:[u],[u]),{gl:f}=O_(),p=oy(r,r,{depthBuffer:!1,stencilBuffer:!1}),m=(0,v.useMemo)(()=>{let e=new gy;e.toneMapped=!1,e.depthTest=!1,e.depthWrite=!1;let t=new za(new Qc(2,2),e),n=new Gr;return n.add(t),{material:e,mesh:t,scene:n,camera:new Au(-1,1,1,-1,0,1)}},[]);return(0,v.useEffect)(()=>{m.material.uNetworkMask=o,m.material.uNetworkGray=s,m.material.uSituatedMask=c,m.material.uSituatedGray=l},[m,o,s,c,l]),k_(e=>{let r=d.length;if(r===0)return;let{i0:o,i1:s,progress:c}=_y(e.clock.elapsedTime,r,t,n);m.material.uTexA=d[o],m.material.uTexB=d[s],m.material.uProgress=c,m.material.uNoiseScale=i,m.material.uEdge=a;let l=f.getRenderTarget();f.setRenderTarget(p),f.render(m.scene,m.camera),f.setRenderTarget(l)}),p.texture}function yy({alphaMaps:e=[`/alpha-a.png`,`/alpha-b.png`],holdSeconds:t=2,transitionSeconds:n=2}){let r=(0,v.useRef)(),{camera:i,viewport:a}=O_(),o=vy(e,{holdSeconds:t,transitionSeconds:n});return k_(()=>{if(r.current){let e=a.getCurrentViewport(i,[0,0,0]);r.current.scale.set(e.width,e.height,1)}}),(0,$.jsxs)(`mesh`,{ref:r,position:[0,0,0],children:[(0,$.jsx)(`planeGeometry`,{args:[1,1]}),(0,$.jsx)(ly,{alphaMap:o,transparent:!0,transmission:1,thickness:1,roughness:.2,ior:1.5,chromaticAberration:0,anisotropicBlur:0,distortion:0,distortionScale:.7,temporalDistortion:0,samples:6,resolution:512})]})}function by(){return(0,$.jsxs)($.Fragment,{children:[(0,$.jsx)(`ambientLight`,{intensity:.3}),(0,$.jsx)(`directionalLight`,{position:[3,4,5],intensity:1}),(0,$.jsx)(hy,{z:-3,noiseScale:.5,speed:.1}),(0,$.jsx)(yy,{alphaMaps:[`/city.png`,`/museum.png`,`/5.png`],holdSeconds:4,transitionSeconds:3})]})}var xy={overlay:`_overlay_1g26y_1`,tabUnit:`_tabUnit_1g26y_15`,panel:`_panel_1g26y_16`,panelOpen:`_panelOpen_1g26y_16`,panelContent:`_panelContent_1g26y_55`,panelHeading:`_panelHeading_1g26y_109`,panelBody:`_panelBody_1g26y_118`,group:`_group_1g26y_127`,groupHeading:`_groupHeading_1g26y_131`,list:`_list_1g26y_141`,listItem:`_listItem_1g26y_147`,itemHeader:`_itemHeader_1g26y_156`,itemMeta:`_itemMeta_1g26y_172`,itemTitle:`_itemTitle_1g26y_179`,itemDesc:`_itemDesc_1g26y_186`,itemBody:`_itemBody_1g26y_193`,itemTag:`_itemTag_1g26y_208`,tab:`_tab_1g26y_15`,tabActive:`_tabActive_1g26y_16`,tabLabel:`_tabLabel_1g26y_262`},Sy=`---
 date: 2026-07-01
 title: Situated AI Network wins Leading House Asia Pacific grant for culturally grounded AI in museums
 short description: The network has been awarded a Leading House Asia Pacific Research Network Grant to build a Swiss–Japan–Korea consortium developing evaluation frameworks for AI in East Asian museums and heritage collections.
@@ -4557,7 +4557,7 @@ This grounding also shapes how the network works. It is not a single lab or a fi
 Get in touch if you are working at this intersection and want to collaborate, host a workshop, or contribute to the network's projects.
 `,Ty=`---
 name: Darío Negueruela del Castillo
-category: lead
+category: team
 role: Scientific Coordinator, Center for Digital Visual Studies — University of Zurich
 affiliation: University of Zurich (UZH)
 email: dario.neguerueladelcastillo@uzh.ch
@@ -4568,9 +4568,11 @@ Network coordinator and principal methodological integrator. Scientific Coordina
 ===
 
 ---
+
 name: Ana Zapata Guzmán
-category: lead
-role: Lead
+category: team
+role: Scientific Collaborator, Center for Digital Visual Studies — University of Zurich
+
 ---
 
 _Bio to be completed._
@@ -4578,20 +4580,12 @@ _Bio to be completed._
 ===
 
 ---
-name: Ludovica Schaerf
-category: lead
-role: Lead
----
 
-_Bio to be completed._
-
-===
-
----
 name: Iacopo Neri
-category: lead
-role: Lead
+category: team
+role: Scientific Collaborator, Center for Digital Visual Studies — University of Zurich
 email: neri.iacopo@gmail.com
+
 ---
 
 _Bio to be completed._
@@ -4599,11 +4593,13 @@ _Bio to be completed._
 ===
 
 ---
+
 name: Noa Garcia
 category: team
 role: Associate Professor
 affiliation: Institute for Advanced Co-Creation Studies, D3 Center — University of Osaka, Japan
 email: noagarcia@ids.osaka-u.ac.jp
+
 ---
 
 Leads the technical and methodological development of the network's evaluation frameworks. Primary developer of VQArt and AQUA, among the most rigorous existing benchmarks for assessing AI performance on art-historical tasks. Leads the Osaka workshop, the PhD masterclass series, and the benchmark adaptation process for the Leading House Asia Pacific project.
@@ -4611,11 +4607,13 @@ Leads the technical and methodological development of the network's evaluation f
 ===
 
 ---
+
 name: YeSeung Lee
 category: team
 role: Associate Professor, Dean, School of Art and Design
 affiliation: Korea University, South Korea
 email: yurisoop@korea.ac.kr
+
 ---
 
 Contributes expertise in interactive and immersive curatorial practice at the intersection of contemporary art and emerging technologies. Responsible for the Curatorial Living Lab implementation at Korea University, in close coordination with Centre Pompidou Hanwha Seoul, ensuring the network's evaluation frameworks stay grounded in actual curatorial reasoning.
@@ -4623,10 +4621,12 @@ Contributes expertise in interactive and immersive curatorial practice at the in
 ===
 
 ---
+
 name: Juhyun Cho
 category: team
 role: Head Curator
 affiliation: Centre Pompidou Hanwha Seoul
+
 ---
 
 Contributes curatorial leadership and institutional coordination from within the museum sector. Hosts the Seoul kick-off workshop and coordinates engagement with the wider East Asian museum network the project seeks to build.
@@ -4634,11 +4634,13 @@ Contributes curatorial leadership and institutional coordination from within the
 ===
 
 ---
+
 name: Joasia Krysa
 category: team
 role: Professor of Exhibition Research
 affiliation: Liverpool School of Art and Design, Liverpool John Moores University, UK
 email: J.M.Krysa@ljmu.ac.uk
+
 ---
 
 Contributes theoretical grounding in curatorial studies, generative curation and exhibition research, connecting the network's methodological outputs to broader debates in contemporary curatorial theory.
@@ -4646,11 +4648,13 @@ Contributes theoretical grounding in curatorial studies, generative curation and
 ===
 
 ---
+
 name: Nuria Rodríguez Ortega
 category: team
 role: Full Professor of Art History, iArtHis_Lab
 affiliation: University of Málaga, Spain
 email: nro@uma.es
+
 ---
 
 Contributes expertise in museology, digital humanities and AI for cultural heritage, bringing a comparative European perspective on the integration of computational methods into museum practice.
@@ -4658,9 +4662,11 @@ Contributes expertise in museology, digital humanities and AI for cultural herit
 ===
 
 ---
+
 name: Paula Gaetano Adi
 category: advisory
 role: Potential collaborator
+
 ---
 
 _Bio to be completed._
@@ -4668,9 +4674,11 @@ _Bio to be completed._
 ===
 
 ---
+
 name: Andrés Burbano
 category: advisory
 role: Potential collaborator
+
 ---
 
 _Bio to be completed._
@@ -4678,9 +4686,11 @@ _Bio to be completed._
 ===
 
 ---
+
 name: Kate Crawford
 category: advisory
 role: Potential collaborator
+
 ---
 
 _Bio to be completed._
@@ -4688,9 +4698,11 @@ _Bio to be completed._
 ===
 
 ---
+
 name: Elizabeth Losh
 category: advisory
 role: Potential collaborator
+
 ---
 
 _Bio to be completed._
@@ -4698,9 +4710,11 @@ _Bio to be completed._
 ===
 
 ---
+
 name: Miriam Simun
 category: advisory
 role: Potential collaborator
+
 ---
 
 _Bio to be completed._
@@ -4708,9 +4722,11 @@ _Bio to be completed._
 ===
 
 ---
+
 name: Ruha Benjamin
 category: advisory
 role: Potential collaborator
+
 ---
 
 _Bio to be completed._
@@ -4718,9 +4734,11 @@ _Bio to be completed._
 ===
 
 ---
+
 name: Sarah Friend
 category: advisory
 role: Potential collaborator
+
 ---
 
 _Bio to be completed._
@@ -4728,9 +4746,11 @@ _Bio to be completed._
 ===
 
 ---
+
 name: Ranjodh Singh Dhaliwal
 category: advisory
 role: Potential collaborator
+
 ---
 
 _Bio to be completed._
@@ -4738,9 +4758,11 @@ _Bio to be completed._
 ===
 
 ---
+
 name: Zach Blas
 category: advisory
 role: Potential collaborator
+
 ---
 
 _Bio to be completed._
@@ -4748,9 +4770,11 @@ _Bio to be completed._
 ===
 
 ---
+
 name: Marija Bozinovska Jones
 category: advisory
 role: Potential collaborator
+
 ---
 
 _Bio to be completed._
@@ -4758,9 +4782,11 @@ _Bio to be completed._
 ===
 
 ---
+
 name: Lauren Lee McCarthy
 category: advisory
 role: Potential collaborator
+
 ---
 
 _Bio to be completed._
